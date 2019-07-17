@@ -56,12 +56,4 @@ public class ProductController {
         productService.delete(id);
         return "redirect:/";
     }
-
-    String testFunc() {
-        return "";
-    }
-
-    void test(){
-        
-    }
 }
