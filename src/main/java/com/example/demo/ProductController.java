@@ -60,4 +60,8 @@ public class ProductController {
     String testFunc() {
         return "";
     }
+
+    void test(){
+        
+    }
 }
