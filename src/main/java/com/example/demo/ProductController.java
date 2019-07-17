@@ -15,8 +15,12 @@ import java.util.List;
 
 @Controller()
 public class ProductController {
-    @Autowired
     private ProductService productService;
+
+    @Autowired
+    public void setProductService(ProductService productService) {
+        this.productService = productService;
+    }
 
     @RequestMapping("/")
     public String home(Model model) {
@@ -34,13 +38,13 @@ public class ProductController {
     }
 
     @PostMapping("/save")
-    public String saveProduct(@ModelAttribute("product")Product product){
+    public String saveProduct(@ModelAttribute("product") Product product) {
         productService.save(product);
         return "redirect:/";
     }
 
     @RequestMapping("/edit/{id}")
-    public ModelAndView showEditPage(@PathVariable(name = "id") Long id){
+    public ModelAndView showEditPage(@PathVariable(name = "id") Long id) {
         ModelAndView mv = new ModelAndView("editProduct");
         Product product = productService.get(id);
         mv.addObject("product", product);
@@ -48,8 +52,12 @@ public class ProductController {
     }
 
     @RequestMapping("/delete/{id}")
-    public String deleteProduct(@PathVariable Long id){
+    public String deleteProduct(@PathVariable Long id) {
         productService.delete(id);
         return "redirect:/";
+    }
+
+    String testFunc() {
+        return "";
     }
 }
