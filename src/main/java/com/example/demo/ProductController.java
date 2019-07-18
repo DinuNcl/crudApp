@@ -12,6 +12,10 @@ public class ProductController {
     String printHello() {
         return "Hello";
     }
+
+    void test(){
+        
+    }
 //    private ProductService productService;
 //
 //    @Autowired
