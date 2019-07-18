@@ -56,8 +56,4 @@ public class ProductController {
         productService.delete(id);
         return "redirect:/";
     }
-
-    void test (){
-        System.out.println("asgdf");
-    }
 }
