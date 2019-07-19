@@ -6,6 +6,6 @@ VOLUME ["/deploy/application"]
 
 WORKDIR /deploy/application
 
-ADD NewCrudApp .
+ADD demo .
 
 ENTRYPOINT ["mvn","clean","package"]
