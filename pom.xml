@@ -53,7 +53,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-        <finalName>newCrudApp</finalName>
+        <finalName>NewCrudApp</finalName>
     </build>
 
 </project>
