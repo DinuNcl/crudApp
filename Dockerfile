@@ -6,6 +6,6 @@ VOLUME ["/deploy/application"]
 
 WORKDIR /deploy/application
 
-ADD spring-demo .
+ADD spring-petclinic .
 
 ENTRYPOINT ["mvn","clean","package"]
