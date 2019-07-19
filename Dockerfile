@@ -6,6 +6,6 @@ VOLUME ["/deploy/application"]
 
 WORKDIR /deploy/application
 
-ADD spring-petclinic .
+ADD NewCrudApp .
 
 ENTRYPOINT ["mvn","clean","package"]
