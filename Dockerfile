@@ -6,6 +6,6 @@ VOLUME ["/deploy/application"]
 
 WORKDIR /deploy/application
 
-ADD target/NewCrudApp.jar NewCrudApp.jar
+ADD NewCrudApp .
 
 ENTRYPOINT ["mvn","clean","package"]
