@@ -10,10 +10,20 @@
 #
 #ENTRYPOINT ["mvn","clean","package"]
 
-FROM java:openjdk-8
+#FROM java:openjdk-8
+#
+#WORKDIR /deploy/application/target
+#
+#EXPOSE 8080
+#
+#ENTRYPOINT ["java","-jar","NewCrudApp.jar"]
 
-WORKDIR /deploy/application/target
+
+
+FROM openjdk:8
+
+ADD target/newcrudapp-spring-boot.jar newcrudapp-spring-boot.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","NewCrudApp.jar"]
+ENTRYPOINT ["java", "-jar", "newcrudapp-spring-boot.jar"]
