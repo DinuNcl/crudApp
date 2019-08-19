@@ -10,7 +10,7 @@ public class ProductController {
     @RequestMapping("/")
     @ResponseBody
     String printHello() {
-        return "sdafdsafsda";
+        return "pppppp";
     }
 //    private ProductService productService;
 //
